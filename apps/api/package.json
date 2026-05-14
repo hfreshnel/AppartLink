@@ -1,0 +1,44 @@
+{
+    "name": "@saas-immo/api",
+    "version": "0.0.1",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "tsx watch src/index.ts",
+        "workers": "tsx watch src/workers/index.ts",
+        "build": "tsc",
+        "start": "node dist/index.js",
+        "typecheck": "tsc --noEmit",
+        "lint": "eslint src",
+        "test": "vitest run",
+        "test:watch": "vitest"
+    },
+    "dependencies": {
+        "@aws-sdk/client-s3": "^3.600.0",
+        "@aws-sdk/s3-request-presigner": "^3.600.0",
+        "@hono/node-server": "^1.12.0",
+        "@hono/zod-validator": "^0.3.0",
+        "@paralleldrive/cuid2": "^2.2.2",
+        "pdfkit": "^0.15.0",
+        "@saas-immo/db": "*",
+        "drizzle-orm": "^0.44.0",
+        "@saas-immo/emails": "*",
+        "@saas-immo/schemas": "*",
+        "@saas-immo/types": "*",
+        "better-auth": "^1.0.0",
+        "bullmq": "^5.12.7",
+        "file-type": "^19.5.0",
+        "hono": "^4.5.1",
+        "ioredis": "^5.4.1",
+        "resend": "^3.4.0",
+        "sharp": "^0.33.4",
+        "zod": "^3.23.8"
+    },
+    "devDependencies": {
+        "@types/node": "^20.14.12",
+        "@types/pdfkit": "^0.13.6",
+        "tsx": "^4.16.2",
+        "typescript": "^5.5.4",
+        "vitest": "^2.0.4"
+    }
+}

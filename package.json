@@ -1,0 +1,31 @@
+{
+    "name": "appartlink",
+    "private": true,
+    "workspaces": [
+        "apps/*",
+        "packages/*"
+    ],
+    "scripts": {
+        "dev": "turbo run dev",
+        "build": "turbo run build",
+        "lint": "turbo run lint",
+        "typecheck": "turbo run typecheck",
+        "test": "turbo run test",
+        "test:e2e": "turbo run test:e2e",
+        "db:generate": "turbo run db:generate --filter=@saas-immo/db",
+        "db:migrate": "turbo run db:migrate --filter=@saas-immo/db",
+        "db:studio": "turbo run db:studio --filter=@saas-immo/db",
+        "db:seed": "turbo run db:seed --filter=@saas-immo/db"
+    },
+    "dependencies": {
+        "drizzle-orm": "^0.44.0"
+    },
+    "devDependencies": {
+        "turbo": "^2.0.9",
+        "typescript": "^5.5.4"
+    },
+    "packageManager": "npm@10.8.1",
+    "engines": {
+        "node": ">=20.0.0"
+    }
+}
